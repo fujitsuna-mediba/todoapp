@@ -59,7 +59,7 @@ const TodoList: React.FC<TodoListProps> = ({
   }, [isAllCheck])
 
   return (
-    <Box maxWidth={800} m={'0 auto'} p={16} height='auto' width={'100%'}>
+    <Box maxWidth={768} m={'0 auto'} p={16} height='auto' width={'100%'}>
       <HStack justify={'space-between'} width={'100%'} px={8}>
         <k.label display={'flex'} alignItems={'center'} gap={16} htmlFor='all_done' color={'#222'}>
           <CheckBox onChange={handleToggleAllDone} checked={isAllCheck} id='all_done' />
