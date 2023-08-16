@@ -39,13 +39,13 @@ const TodoList: React.FC<TodoListProps> = ({
           if (todo.text === '') {
             return todo
           }
-          createAddTreeNumber()
+          !isAllCheck && createAddTreeNumber()
           return { ...todo, isCompleted: !isAllCheck }
         })
         handleSetData(updatedTodos)
       } else {
         const updatedTodos = todos.map(todo => {
-          createAddTreeNumber()
+          !isAllCheck && createAddTreeNumber()
           return { ...todo, isCompleted: !isAllCheck }
         })
         handleSetData(updatedTodos)

@@ -32,10 +32,15 @@ const App: React.FC = () => {
 
   const createAddTreeNumber = useCallback(() => {
     const addNumber = Math.floor(Math.random() * 9) + 1
-    const lastNumber = treeCount[treeCount.length - 1]
 
-    if (addNumber === lastNumber) return createAddTreeNumber()
-    return treeCount.length === 0 ? setTreeCount([addNumber]) : setTreeCount([...treeCount, addNumber])
+    if (treeCount.length > 0) {
+      const lastNumber = treeCount[treeCount.length - 1]
+      if (addNumber === lastNumber) {
+        return
+      }
+    }
+
+    setTreeCount(prevTreeCount => [...prevTreeCount, addNumber])
   }, [treeCount])
 
   const handleResetTreeCount = useCallback(() => {
@@ -46,7 +51,7 @@ const App: React.FC = () => {
     (id: string) => {
       const newData = todos.map(v => {
         if (id === v.id) {
-          if (!v.isCompleted === true) {
+          if (!v.isCompleted) {
             createAddTreeNumber()
           }
           return { id: v.id, text: v.text, isCompleted: !v.isCompleted }
