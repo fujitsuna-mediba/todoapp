@@ -76,7 +76,7 @@ const StyledCheckBox = styled.input`
   }
 `
 
-const StyledCheckBoxContainer = styled.button<{ disabled?: boolean }>`
+const StyledCheckBoxContainer = styled.label<{ disabled?: boolean }>`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
   transition: opacity 0.3s;
