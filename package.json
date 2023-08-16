@@ -13,6 +13,7 @@
   "dependencies": {
     "@kuma-ui/core": "^1.1.1",
     "@kuma-ui/vite": "^1.0.6",
+    "@vercel/analytics": "^1.0.2",
     "eslint-config-prettier": "^8.9.0",
     "prettier": "^3.0.0",
     "react": "^18.2.0",
