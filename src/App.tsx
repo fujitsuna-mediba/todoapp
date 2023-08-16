@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import TodoList from './components/TodoList'
 import logo from './assets/logo.png'
-import { Box } from '@kuma-ui/core'
+import { Box, Text } from '@kuma-ui/core'
 import { SwitchTreeComponents } from './components/TreeIcon/index'
 
 export type Todo = {
@@ -134,6 +134,11 @@ const App: React.FC = () => {
         ))}
       </Box>
       {treeCount.length > 0 && <Box bgColor={'#593D23'} width={'100%'} height={5} mt={-5} />}
+      <Box width={'100%'}>
+        <Text as='p' fontWeight={200} color='#593D23' textAlign={'end'} fontSize={12}>
+          © 2023 Yu Fujitsuna
+        </Text>
+      </Box>
     </Box>
   )
 }
