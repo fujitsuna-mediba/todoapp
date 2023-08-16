@@ -1,25 +1,15 @@
 import React, { ReactNode, ButtonHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-type IconContainerProps = {
+type EditIconContainerProps = {
   children: ReactNode
   color?: string
   onClick?: () => void
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'>
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
-const defaultColor = '#A66C6C'
-
-const IconContainer: React.FC<IconContainerProps> = ({ children, color = defaultColor, onClick, ...buttonProps }) => {
-  const hoverColor = `${color}33`
-  const activeColor = `${color}66`
-
+const IconContainer: React.FC<EditIconContainerProps> = ({ children, color = '#A66C6C', onClick, ...buttonProps }) => {
   return (
-    <IconContainerBox
-      color={color}
-      hoverColor={hoverColor}
-      activeColor={activeColor}
-      onClick={onClick}
-      {...buttonProps}>
+    <IconContainerBox color={color} onClick={onClick} disabled={buttonProps.disabled} tabIndex={1} {...buttonProps}>
       {children}
     </IconContainerBox>
   )
@@ -27,11 +17,7 @@ const IconContainer: React.FC<IconContainerProps> = ({ children, color = default
 
 export default IconContainer
 
-const IconContainerBox = styled.button<{
-  color: string
-  hoverColor: string
-  activeColor: string
-}>`
+const IconContainerBox = styled.button<{ color: string; disabled?: boolean }>`
   color: ${props => props.color};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   transition: opacity 0.3s;
@@ -49,10 +35,10 @@ const IconContainerBox = styled.button<{
   }
 
   &:hover {
-    background: ${props => props.hoverColor};
+    background: #a66c6c33;
   }
 
   &:active {
-    background: ${props => props.activeColor};
+    background: #a66c6c66;
   }
 `
