@@ -1299,26 +1299,26 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@kuma-ui/babel-plugin@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@kuma-ui/babel-plugin/-/babel-plugin-1.1.2.tgz#c4f0109b14a144aaa477cbd6bc84a02cefd7f1d8"
-  integrity sha512-pEbg6bulvyZ4fUcG/kKqg+k+RNtTdfkXJgdR6m02mdbea2xkCNNdYfZqBBY7nJ8owGpF7dYhyq3tVYYGnxdP5A==
+"@kuma-ui/babel-plugin@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@kuma-ui/babel-plugin/-/babel-plugin-1.1.7.tgz#39d0a66a712dc42c77e6c5adfec8c50cfbbe875a"
+  integrity sha512-11LTBp/k5QINW96G86d57pJKz4s7mgimo3auGQnzYhj70A8+l1Wkj1AAaYtyAstD8/htBydvytz07ddJzbyjvA==
   dependencies:
     "@babel/core" "^7.21.4"
-    "@kuma-ui/compiler" "^1.0.4"
-    "@kuma-ui/core" "^1.1.1"
-    "@kuma-ui/sheet" "^1.0.1"
-    "@kuma-ui/system" "^1.1.0"
+    "@kuma-ui/compiler" "^1.1.0"
+    "@kuma-ui/core" "^1.4.0"
+    "@kuma-ui/sheet" "^1.3.0"
+    "@kuma-ui/system" "^1.5.0"
     ts-pattern "^5.0.1"
 
-"@kuma-ui/compiler@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@kuma-ui/compiler/-/compiler-1.0.4.tgz#5258e297c716663feee024f8e02410d357e662fb"
-  integrity sha512-7HwkSfmXkfTvjBrpETZdwYbDvd8b6uC7pNBHXjQbv8B9YhVNF33dKKwL4n3PrjzqNRBS1LBsSQiQBXSHAtrpGQ==
+"@kuma-ui/compiler@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@kuma-ui/compiler/-/compiler-1.1.0.tgz#f3eb394e54ede03babb55e70127b6a84a4f219a7"
+  integrity sha512-2FRUtWjJIyCBBpD2xHjpcWtko1fhIfev0zG/Q8YSjGI5mzpPhjnPw25hpEIu9gtSV7CMfDrgOIYyfgkeOcRIGA==
   dependencies:
-    "@kuma-ui/core" "^1.1.1"
-    "@kuma-ui/sheet" "^1.0.1"
-    "@kuma-ui/system" "^1.1.0"
+    "@kuma-ui/core" "^1.4.0"
+    "@kuma-ui/sheet" "^1.3.0"
+    "@kuma-ui/system" "^1.5.0"
     ts-morph "^19.0.0"
     ts-pattern "^5.0.1"
 
@@ -1333,14 +1333,32 @@
     stylis "^4.2.0"
     ts-pattern "^5.0.1"
 
-"@kuma-ui/sheet@1.0.1", "@kuma-ui/sheet@^1.0.1":
+"@kuma-ui/core@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@kuma-ui/core/-/core-1.4.0.tgz#f9b20ee3923c746899dc5e2690351ad783a18b22"
+  integrity sha512-+eZF7RxGuVN3PMA+xE0mBoVlDRGAoln7Z4/06IkWWAsL3de7sVR3Eh0+tJbpXDqKAHhUi/zx6WTv0/NCldSaIA==
+  dependencies:
+    "@kuma-ui/sheet" "1.3.0"
+    "@kuma-ui/system" "1.5.0"
+    "@types/stylis" "^4.2.0"
+    stylis "^4.2.0"
+    ts-pattern "^5.0.1"
+
+"@kuma-ui/sheet@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@kuma-ui/sheet/-/sheet-1.0.1.tgz#8c39ff0537b099a24763bef07ceab55bef9ca3fc"
   integrity sha512-D5MrDi36THZPcF+SkhTjaFP5dsbUdCm66efJa0cAtkg2bFuQIFYoz6Dz1EFQCeA1GKri6Ul9ltiLb3FOMb77lw==
   dependencies:
     stylis "^4.2.0"
 
-"@kuma-ui/system@1.1.0", "@kuma-ui/system@^1.1.0":
+"@kuma-ui/sheet@1.3.0", "@kuma-ui/sheet@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@kuma-ui/sheet/-/sheet-1.3.0.tgz#d1d434731932fbadc55d08b50b1b4729da1cc451"
+  integrity sha512-yKn+k0NaoMgwRzJ7ol2E9vFpuqqsarNl1+CDhldUA2GlujdaLbg0sovlWPufQzFCSraOkkRanADJA89ddm8x8A==
+  dependencies:
+    stylis "^4.2.0"
+
+"@kuma-ui/system@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@kuma-ui/system/-/system-1.1.0.tgz#118d322915ad44af5fc9d5619cd1ec543baa52c5"
   integrity sha512-S1pOoWzyOMBGRPzDcDhk7PP9c3AIHtQGMw1gns+h617ZmceUA63HrGmA5bmBz4d/Mjmpy02j6B5e2KoCFDoabw==
@@ -1348,14 +1366,22 @@
     "@kuma-ui/sheet" "1.0.1"
     csstype "^3.1.2"
 
-"@kuma-ui/vite@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@kuma-ui/vite/-/vite-1.0.6.tgz#1406c60fb00977caed114ee7740f8ab230d48f4b"
-  integrity sha512-oDpzmfDir9LdHRuSgwj4+eqTfua9i0WW3nHWZNnhK9Syf8ji5tSqR9QWvirHfnYEOdntL74ph+b/WXneb2QEhA==
+"@kuma-ui/system@1.5.0", "@kuma-ui/system@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@kuma-ui/system/-/system-1.5.0.tgz#30708c29eb42eeac3c2559468115784ca9f34246"
+  integrity sha512-O716cGbcMl/7pZsTxOF7fV4gJBQXvPQtGl0Zsw4BAwy9YJOUQzk9z2OW5RVUgzo+iq7gxyFvECdoyKMBM6b6+A==
   dependencies:
-    "@kuma-ui/babel-plugin" "^1.1.2"
-    "@kuma-ui/sheet" "^1.0.1"
-    "@kuma-ui/system" "^1.1.0"
+    "@kuma-ui/sheet" "1.3.0"
+    csstype "^3.1.2"
+
+"@kuma-ui/vite@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@kuma-ui/vite/-/vite-1.1.0.tgz#8f94d98af8acc461e3f8beb75f62e0c13917b13f"
+  integrity sha512-9ba1SnkyrwyIkwv69z5w+I4l8dZ8jVaJdrbDxakap9bZViU2Keq9Jgs0eKYhepfbbqLL4iDeZvT0/kDP57opZA==
+  dependencies:
+    "@kuma-ui/babel-plugin" "^1.1.7"
+    "@kuma-ui/sheet" "^1.3.0"
+    "@kuma-ui/system" "^1.5.0"
     esbuild "^0.18.0"
     eval "^0.1.8"
 
