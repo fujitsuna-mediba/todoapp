@@ -4,13 +4,5 @@ import KumaUI from '@kuma-ui/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), KumaUI()],
-  server: {
-    hmr: {
-      host: 'localhost'
-    },
-    watch: {
-      usePolling: true
-    }
-  }
+  plugins: [react(), KumaUI()]
 })
