@@ -5,7 +5,7 @@ export const Tree5 = () => {
   return (
     <span>
       <img src={TreeImage} alt='logo' width={48} height={65} />
-      <Box bgColor={'#593D23'} width={'auto'} height={5} mt={-5} />
+      <Box bgColor={'#593D23'} width={'auto'} height={5} mt={'-5px'} />
     </span>
   )
 }

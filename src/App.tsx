@@ -133,7 +133,7 @@ const App: React.FC = () => {
           <SwitchTreeComponents key={i} numbering={n} />
         ))}
       </Box>
-      {treeCount.length > 0 && <Box bgColor={'#593D23'} width={'100%'} height={5} mt={-5} />}
+      {treeCount.length > 0 && <Box bgColor={'#593D23'} width={'100%'} height={5} mt={'-5px'} />}
       <Box width={'100%'}>
         <Text as='p' fontWeight={200} color='#593D23' textAlign={'end'} fontSize={12}>
           © 2023 Yu Fujitsuna
